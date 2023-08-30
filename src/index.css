@@ -2,7 +2,7 @@ header {
   background-color: aqua;
   justify-content: center;
 }
-main {
+main1 {
   font-size: larger;
   text-align: center; /* Center the text horizontally */
   position: absolute; /* Positioning is absolute */
