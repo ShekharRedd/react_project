@@ -11,12 +11,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import Practise from './Practise';
-
+import Route_1 from './Route_1';
 import './index.css';
 // Use createRoot to render the App component
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
-// root.render(<Practise />);
+// root.render(<App />);
+root.render(<Route_1 />);
 
 
 

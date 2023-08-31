@@ -153,10 +153,11 @@ function App() {
         length ={items.length}
       />
       
-    <button type = "button" onClick={(e)=>setBute(true)}>Click here </button>
-    { true && <Route_1 />}
+    {/* <button type = "button" onClick={(e)=>setBute(true)}>Click here </button> */}
+    {/* { true && <Route_1 />} */}
+    <Route_1 />
 
-    <Practise />
+    {/* <Practise /> */}
     </div>
   
   );

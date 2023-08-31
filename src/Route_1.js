@@ -4,27 +4,26 @@ import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
 // import About from './about';
 import Practise from './Practise';
 import Home from './Home';
+import Header from './Header';
 
 
 function Route_1() {
 
 	return (
 	<Router>
+		
+		<Header />
 		<div className="App">
-			<ul className="App-header">
-			<li>
-				<Link to="/Home">Home</Link>
-			</li>
-			<li>
-				<Link to="/about" >About Us</Link>
-			</li>
-x
-			</ul>
+		<Link to="/">Home</Link> <br></br>
+		<Link to="/about" >About Us</Link>
+		
 		<Routes>
-				<Route exact path='/Home' element={<Home />}></Route>
-				<Route exact path='/about' element={< Practise />}></Route>
+		<Route exact path="/" element={<Home />} />
+	
+		<Route exact path='/about' element={<Practise />}></Route>
 
 		</Routes>
+		<p>Copy & Rights</p>
 		</div>
 	</Router>
 );
