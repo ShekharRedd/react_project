@@ -1,10 +1,18 @@
 import React from 'react'
-
-const Home = () => {
+import { Link } from 'react-router-dom'
+const Home = ({posts}) => {
   return (
-   <p>
-    HOME
-   </p>
+    <ul>
+      {posts.map((items)=>
+      <li key={items.id}>
+        <Link to={`/post/${items.id}`}>
+        {items.title}
+        </Link>
+        {items.datetime}
+        {items.body}
+      </li>
+      )}
+    </ul>
   )
 }
 
