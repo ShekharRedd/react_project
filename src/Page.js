@@ -3,7 +3,7 @@ import { useParams  } from 'react-router';
 import { Link } from 'react-router-dom';
 const Page = ({posts}) => {
     const { id } =useParams();
-    const post=posts.find(post=>(post.id).toString()==='7');
+    const post=posts.find(post=>(post.id).toString() === id);
   return (
     <div>
       {post && 

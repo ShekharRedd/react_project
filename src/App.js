@@ -8,6 +8,10 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Footer from './Footer';
 import Page from './Page';
+
+
+import { useNavigate } from 'react-router-dom';
+
 const App = () => {
 
   const [posts, setPosts] = useState([
@@ -36,19 +40,42 @@ const App = () => {
       body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequatur expedita, assumenda similique non optio! Modi nesciunt excepturi corrupti atque blanditiis quo nobis, non optio quae possimus illum exercitationem ipsa!"
     }
   ])
+
+  const [postTitle,setPostTitle] =useState('')
+  const [bodyTitle, setBodyTitle] = useState('')
+  const navigate = useNavigate(); 
+
+  const HandleSubmit =()=>{
+    const idd=posts.length ? posts[posts.length-1].id +1 : 1
+    console.log(idd)
+    console.log(typeof idd)
+    console.log(typeof posts[3].id)
+    console.log(posts[3].id)
+    const newPost = {id:idd ,title: postTitle, datetime:"July 01, 2021 11:17:36 AM",body: bodyTitle}
+    const res=[...posts ,newPost]
+    
+    setPosts(res)
+console.log(res)
+    navigate('/')
+  }
   return (
     <div>
-    <Router>
+    
       <p>hello world</p>
       <Nav />
       <Routes>
         <Route  path='/' element={<Home posts={posts} />} />
-        <Route  path='/post' element={<Post />} />
+        <Route  path='/post' element={<Post 
+
+              setPostTitle={setPostTitle} 
+              setBodyTitle={setBodyTitle}
+              HandleSubmit={HandleSubmit}
+              />}
+          />
         <Route path='/post/:id' element={<Page posts={posts}/>}></Route>
       </Routes>
       <Footer />
-    
-    </Router>
+      
     </div>
   );
 };
