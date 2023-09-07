@@ -12,7 +12,9 @@ const Home = ({posts}) => {
         {items.body}
       </li>
       )}
+      <Link to={'/login'}>Click Login</Link>
     </ul>
+
   )
 }
 

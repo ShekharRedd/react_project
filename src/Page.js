@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams  } from 'react-router';
 import { Link } from 'react-router-dom';
-const Page = ({posts}) => {
+const Page = ({posts,HandleDelete ,HandleEdit}) => {
     const { id } =useParams();
     const post=posts.find(post=>(post.id).toString() === id);
   return (
@@ -9,6 +9,9 @@ const Page = ({posts}) => {
       {post && 
         <>
         <h2>{post.title}</h2>
+        <h3>{post.body}</h3>
+        <button onClick={()=>HandleDelete(post.id)}>Delete</button>
+        <Link to={`/post/edit/${post.id}`}><button>Edit </button></Link>
         </>
       }
       {!post && 
