@@ -13,6 +13,9 @@ const Home = ({posts}) => {
       </li>
       )}
       <Link to={'/login'}>Click Login</Link>
+
+      <Link to={'/menupage'}>Menu List</Link>
+      <Link to={'/checkstatus'}>Status Order</Link>
     </ul>
 
   )

@@ -14,6 +14,7 @@ const Login = () => {
         <input 
          type='password'
         />
+       <button type='button'>Submit</button> 
       </form>
     </>
   )

@@ -42,22 +42,24 @@ const App = () => {
       "body": "Some more testing paragraphs!"
     }
   ])
-  console.log("before connected")
-  // useEffect(()=>{
-  //   const fetch_data=async ()=>{
-  //     try{
-  //     const response= await api.get('/posts')
-  //     console.log(response)
-  //     setPosts(response.data)
-  //     } 
-  //   catch (err){
 
-  //       console.log(err.stack)
-  //   }
-  //   }
-  //   fetch_data()
-  //   console.log("ram")
-  // },[])
+  const [menu,setMenu] =useState([])
+  console.log("before connected")
+  useEffect(()=>{
+    const fetch_data=async ()=>{
+      try{
+      const response= await api.get('/array')
+      console.log(response)
+      setPosts(response.data)
+      } 
+    catch (err){
+
+        console.log(err.stack)
+    }
+    }
+    fetch_data()
+    console.log("ram")
+  },[])
   console.log("after connected")
   const [postTitle,setPostTitle] =useState('')
   const [bodyTitle, setBodyTitle] = useState('')
