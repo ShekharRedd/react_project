@@ -84,7 +84,7 @@ const Mapp = () => {
                 />} />
                 <Route path='/cart' element={<Cart 
                       cart_items={cart_items}
-                      
+                      setCart_items={setCart_items}
                         />} />
           </Routes>
 

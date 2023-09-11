@@ -15,8 +15,6 @@ const [cart_list,setCart_list]=useState([])
   return (
     <>
     <Link to={'/cart'} 
-    // cart_items={cart_items}
-    // setCart_items={setCart_items}
     >Cart Items</Link>
       <main>
        {
