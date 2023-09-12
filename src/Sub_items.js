@@ -4,7 +4,6 @@ import Cart from './Cart';
 const Sub_items = ({ cart_items,setCart_items,item_name, setItem_name, mapping }) => {
   const [check,setCheck] =useState(false)
   
-
   // const Calculate = (id, item, price) => {
 
 
