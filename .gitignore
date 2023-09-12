@@ -21,14 +21,16 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.web*
-.bab*
+
 /practiseask
 /Data
-/public
+
 Du*
-pack*
+package-lo*
 task*
-web*
+
 Rea*
 
+webs*
+rou*
+my-app-0.1*

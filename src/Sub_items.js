@@ -23,18 +23,29 @@ const Sub_items = ({ cart_items,setCart_items,item_name, setItem_name, mapping }
 
 
   const [checkedItems, setCheckedItems] = useState({});
-
+  const [ch,setCh]=useState({})
+  
   const Calculate = (id, item, price) => {
     // Toggle the checked state for the clicked item
     // console.log(checkedItems)
     const newCheckedItems = { ...checkedItems };
-    console.log("hihih",newCheckedItems)
+    // console.log("hihih",newCheckedItems)
     newCheckedItems[id] = !newCheckedItems[id];
-    console.log(newCheckedItems[id])
-
+    // console.log(newCheckedItems[id])
     // Update the checked state
     setCheckedItems(newCheckedItems);
+    const sets={ ...ch}
+
+    console.log("sets value is",sets)
     
+    ch[id]=!ch[id]
+    console.log(ch[id])
+    console.log(ch)
+    setCh(ch) 
+    console.log(ch)
+    ch[200]="flase"
+    setCh(ch)
+    console.log(ch)
     // Depending on the checked state, add or remove the item from the cart
     if (newCheckedItems[id]) {
       const newItems = [id, price, item];
@@ -44,9 +55,12 @@ const Sub_items = ({ cart_items,setCart_items,item_name, setItem_name, mapping }
       setCart_items(remove_item);
     }
   };
-  console.log(checkedItems)
+  // console.log(checkedItems)
   // console.log(cart_items)
   // console.log("ghisdfsf",mapping)
+  
+
+  
   return (
     <li> 
       Select Order to Add Cart
