@@ -7,11 +7,9 @@ import Mapp from './Mapp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Router>
-        <Routes>
-            <Route path='/*' element={<Mapp />} />
-        </Routes>
-    </Router>
+        <div>
+            <p>hello world</p>
+        </div>
 );
 
 
