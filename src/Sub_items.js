@@ -1,51 +1,18 @@
-import { Link } from 'react-router-dom';
-import React, { useState,useEffect } from 'react';
-import Cart from './Cart';
+
+import React, { useState } from 'react';
+
 const Sub_items = ({ cart_items,setCart_items,item_name, setItem_name, mapping }) => {
-  const [check,setCheck] =useState(false)
   
-  // const Calculate = (id, item, price) => {
-
-
-  //   if(!check){
-  //   const newItems = [id,price,item]
-  //   setCart_items((pre)=>[...pre,newItems])
-  //   setCheck(true)
-  //   }
-  //   if(check){
-  //     const newItems=[id,price,item]
-  //     const remove_item=cart_items.filter((pre)=>pre[0]!==id ? pre : null)
-  //     setCart_items(remove_item)
-  //     setCheck(false)
-  //   }
-  // };
-
-
   const [checkedItems, setCheckedItems] = useState({});
-  const [ch,setCh]=useState({})
+  
   
   const Calculate = (id, item, price) => {
-    // Toggle the checked state for the clicked item
-    // console.log(checkedItems)
     const newCheckedItems = { ...checkedItems };
-    // console.log("hihih",newCheckedItems)
-    newCheckedItems[id] = !newCheckedItems[id];
-    // console.log(newCheckedItems[id])
-    // Update the checked state
-    setCheckedItems(newCheckedItems);
-    const sets={ ...ch}
-
-    console.log("sets value is",sets)
     
-    ch[id]=!ch[id]
-    console.log(ch[id])
-    console.log(ch)
-    setCh(ch) 
-    console.log(ch)
-    ch[200]="flase"
-    setCh(ch)
-    console.log(ch)
-    // Depending on the checked state, add or remove the item from the cart
+    newCheckedItems[id] = !newCheckedItems[id];
+
+    setCheckedItems(newCheckedItems);
+  
     if (newCheckedItems[id]) {
       const newItems = [id, price, item];
       setCart_items((prev) => [...prev, newItems]);
@@ -54,20 +21,16 @@ const Sub_items = ({ cart_items,setCart_items,item_name, setItem_name, mapping }
       setCart_items(remove_item);
     }
   };
-  // console.log(checkedItems)
-  // console.log(cart_items)
-  // console.log("ghisdfsf",mapping)
-  
-
+ 
   
   return (
     <li> 
       Select Order to Add Cart
       
         {mapping.map((subItem,index) => (
-         <ul>
+         <ul key={index}>
           
-          <li key={index}>
+          <li >
             <input
               type='checkbox'
               checked={checkedItems[subItem[0]] || false}
