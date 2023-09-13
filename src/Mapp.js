@@ -22,7 +22,7 @@ const Mapp = () => {
                    "id":"94298",
                    "name":"3 Chicken Wings",
                    "position":1,
-                   "description":"Tender, Spicy and Juicy. Original or Peri-Crusted",
+                   "description":"Tender hekeje, Spicy and Juicy. Original or Peri-Crusted",
                    "images":[
       
                    ],
