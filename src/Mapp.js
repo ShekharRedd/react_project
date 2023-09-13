@@ -6,7 +6,6 @@ import { useState, useEffect } from 'react';
 import Menu from './Menu';
 import Cart from './Cart';
 
-
 const Mapp = () => {
     const [menu,setMenu] =useState([])
     
@@ -20,7 +19,7 @@ const Mapp = () => {
              "menu-items":[
                 {
                    "id":"94298",
-                   "name":"3 Chicken Wings",
+                   "name":"3 Chicken Wasfdsfings",
                    "position":1,
                    "description":"Tender sfhj, Spicy and Juicy. Original or Peri-Crusted",
                    "images":[
