@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 
-const Sub_items = ({ cart_items,setCart_items,item_name, setItem_name, mapping }) => {
+const Subitems = ({ cart_items,setCart_items,item_name, setItem_name, mapping }) => {
   
   const [checkedItems, setCheckedItems] = useState({});
   
@@ -45,7 +45,7 @@ const Sub_items = ({ cart_items,setCart_items,item_name, setItem_name, mapping }
     </li>
   );
 };
-export default Sub_items;
+export default Subitems;
 
 
 

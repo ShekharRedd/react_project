@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Sub_items from './Sub_items'
+import Subitems from './Subitems'
 
 
 const Menu = ({cart_items, setCart_items,items,setItems}) => {
@@ -16,7 +16,7 @@ const Menu = ({cart_items, setCart_items,items,setItems}) => {
         <p>Item Name: {menu_item[0]}</p>
         
 
-       {<Sub_items 
+       {<Subitems 
             item_name={menu_item[0]}
             setItem_name={setItem_name}
             mapping={menu_item[2]}
