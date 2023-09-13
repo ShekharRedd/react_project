@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes,Route, Link} from 'react-router-dom';
+import { Routes,Route} from 'react-router-dom';
 
 // import { BrowserRouter as Router } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -240,8 +240,7 @@ const Mapp = () => {
     return (
         <div>
           <Routes>
-                
-                
+
                 <Route path='/' 
                     element={<Menu 
                       items={items}
