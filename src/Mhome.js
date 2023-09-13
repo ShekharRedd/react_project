@@ -7,7 +7,6 @@ const Mhome = () => {
     <>
     <h1>Nare Kabey Restarent</h1>
     <ul>
-        
         <Link to={'/'} >Menu Card</Link>
     </ul>
         

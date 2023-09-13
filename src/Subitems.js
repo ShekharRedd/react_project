@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const Subitems = ({ cart_items,setCart_items,item_name, setItem_name, mapping }) => {
   
   const [checkedItems, setCheckedItems] = useState({});
-  
+
   
   const Calculate = (id, item, price) => {
     const newCheckedItems = { ...checkedItems };

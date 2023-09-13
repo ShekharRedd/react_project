@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Subitems from './Subitems'
-
+import { Link } from 'react-router-dom'
 
 const Menu = ({cart_items, setCart_items,items,setItems}) => {
   
@@ -8,7 +8,8 @@ const Menu = ({cart_items, setCart_items,items,setItems}) => {
   console.log(item_name)
   return (
     <>
-
+    <Link to={'/cart'} 
+    >Cart Items</Link>
       <main>
        {
         items.map((menu_item,index)=>

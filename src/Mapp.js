@@ -4,7 +4,7 @@ import { Routes,Route} from 'react-router-dom';
 // import { BrowserRouter as Router } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Menu from './Menu';
-
+import Cart from './Cart';
 
 
 const Mapp = () => {
@@ -248,6 +248,10 @@ const Mapp = () => {
                       cart_items={cart_items}
                       setCart_items={setCart_items}
                 />} />
+                     <Route path='/cart' element={<Cart 
+                      cart_items={cart_items}
+                      setCart_items={setCart_items}
+                        />} />                
           </Routes>
 
         </div>
