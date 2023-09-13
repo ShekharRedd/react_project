@@ -5,7 +5,7 @@ import Sub_items from './Sub_items'
 const Cart = ({cart_items,setCart_items}) => {
   const [total_sum,setTotal_sum] =useState(0)
     console.log("cart items are",cart_items)
-    const remove_item =(id)=>{
+    const remove_item =(id)>{
       console.log("remove_itmes")
       console.log(typeof cart_items)
       console.log(id)
