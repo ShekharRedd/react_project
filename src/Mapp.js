@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes,Route} from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 // import { BrowserRouter as Router } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Menu from './Menu';
@@ -238,7 +238,10 @@ const Mapp = () => {
       
     return (
         <div>
+             <Link to={'/cart'} 
+         >Cart Items</Link>
           <Routes>
+            
 
                 <Route path='/' 
                     element={<Menu 
